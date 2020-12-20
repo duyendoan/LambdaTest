@@ -130,7 +130,7 @@
             </div>
 
             <!--FORM-->
-            <form onsubmit="return validateForm()">
+            <form action="paymentHandler.php" method="post" name="frmSubmitClaim" onsubmit="return validateForm()">
                 <div class="row section">
                     <!--Billing-->
                     <div class="col-md-6 col-sm-6 col-xs-12">
@@ -138,7 +138,7 @@
                         <div class="row">
                             <div class="col-md-6 col-sm-6 col-xs-12"><label for="firstName">First Name </label><span
                                     class="required">*</span></div>
-                            <div class="col-md-6 col-sm-6 col-xs-12"><input type="text" name="firstName" id="firstName"
+                            <div class="col-md-6 col-sm-6 col-xs-12"><input type="text" name="firstName" id="firstName" value=""
                                     placeholder="First Name" required /></div>
                         </div>
                         <div class="row">
@@ -197,7 +197,7 @@
                         <div class="row">
                             <div class="col-md-6 col-sm-6 col-xs-12"><label for="mfirstName">First Name</label><span
                                     class="required">*</span></div>
-                            <div class="col-md-6 col-sm-6 col-xs-12"><input type="text" name="mfirstName"
+                            <div class="col-md-6 col-sm-6 col-xs-12"><input type="text" name="mfirstName" value=""
                                     id="mfirstName" placeholder="First Name" required /></div>
                         </div>
                         <div class="row">
@@ -409,13 +409,7 @@
 </body>
 <script type="text/javascript">
     function validateForm() {
-        var numberType = /[0-9]/;
-        if (!$("#cvc").val().match(numberType)) {
-            return false;
-        }
-        return true;
-
-        /*$("#expDateError").text('');
+        $("#expDateError").text('');
         $("#creditNumError").text('');
         $("#cvcError").text('');
 
@@ -462,7 +456,7 @@
         else {
             $("#cvcError").text('');
         }
-        return true;*/
+        return true;
     }
 
     $(document).on('change', "#sameAddress", function () {
