@@ -130,7 +130,7 @@
             </div>
 
             <!--FORM-->
-            <form action="paymentHandler.php" method="post" name="frmSubmitClaim" onsubmit="return validateForm()">
+            <form onsubmit="return validateForm()">
                 <div class="row section">
                     <!--Billing-->
                     <div class="col-md-6 col-sm-6 col-xs-12">
@@ -409,7 +409,13 @@
 </body>
 <script type="text/javascript">
     function validateForm() {
-        $("#expDateError").text('');
+        var numberType = /[0-9]/;
+        if (!$("#cvc").val().match(numberType)) {
+            return false;
+        }
+        return true;
+
+        /*$("#expDateError").text('');
         $("#creditNumError").text('');
         $("#cvcError").text('');
 
@@ -456,7 +462,7 @@
         else {
             $("#cvcError").text('');
         }
-        return true;
+        return true;*/
     }
 
     $(document).on('change', "#sameAddress", function () {
