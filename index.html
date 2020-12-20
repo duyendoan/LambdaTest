@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Alemania Tools Portal</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicons -->
+    <link href="img/favicon.png" rel="icon">
+    <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700|Raleway:300,400,400i,500,500i,700,800,900"
+        rel="stylesheet">
+
+    <!-- Bootstrap CSS File -->
+    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Libraries CSS Files -->
+    <link href="lib/nivo-slider/css/nivo-slider.css" rel="stylesheet">
+    <link href="lib/owlcarousel/owl.carousel.css" rel="stylesheet">
+    <link href="lib/owlcarousel/owl.transitions.css" rel="stylesheet">
+    <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/venobox/venobox.css" rel="stylesheet">
+
+    <!-- Nivo Slider Theme -->
+    <link href="css/nivo-slider-theme.css" rel="stylesheet">
+
+    <!-- Main Stylesheet File -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- Responsive Stylesheet File -->
+    <link href="css/responsive.css" rel="stylesheet">
+
+    <!-- =======================================================
+    Theme Name: eBusiness
+    Theme URL: https://bootstrapmade.com/ebusiness-bootstrap-corporate-template/
+    Author: BootstrapMade.com
+    License: https://bootstrapmade.com/license/
+    ======================================================= -->
+</head>
+
+<body data-spy="scroll" data-target="#navbar-example">
+    <div id="preloader"></div>
+
+    <header>
+        <!-- header-area start -->
+        <div id="sticker" class="header-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 col-sm-12">
+
+                        <!-- Navigation -->
+                        <nav class="navbar navbar-default">
+                            <!-- Collect the nav links, forms, and other content for toggling -->
+                            <div class="collapse navbar-collapse main-menu bs-example-navbar-collapse-1"
+                                id="navbar-example">
+                                <ul class="nav navbar-nav navbar-right">
+                                    <li>
+                                        <a class="page-scroll" href="#">Home</a>
+                                    </li>
+                                    <li class="active">
+                                        <a class="page-scroll" href="#">Submit Claim</a>
+                                    </li>
+                                    <li>
+                                        <a class="page-scroll" href="#">View Cart(1)</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- navbar-collapse -->
+                        </nav>
+                        <!-- END: Navigation -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- header-area end -->
+    </header>
+    <!-- header end -->
+
+
+    <div class="header-bg page-area">
+        <div class="home-overly"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div class="slider-content text-center" style="padding-top:100px;padding-bottom:50px">
+                        <div class="header-bottom">
+                            <div class="layer2 wow zoomIn" data-wow-duration="1s" data-wow-delay=".4s">
+                                <h1 class="title2">Submit Claim</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="main">
+            <!--CART-->
+            <div class="section">
+                <h2>Cart</h2>
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>Item #</th>
+                            <th>Tool Name</th>
+                            <th>Rate</th>
+                            <th>Quantity</th>
+                            <th>Subtotal</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td></td>
+                            <td>Tool 1</td>
+                            <td>$49.99</td>
+                            <td>2</td>
+                            <td>$99.98</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!--FORM-->
+            <form action="paymentHandler.php" method="post" name="frmSubmitClaim" onsubmit="return validateForm()">
+                <div class="row section">
+                    <!--Billing-->
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <h2>Billing Details</h2>
+                        <div class="row">
+                            <div class="col-md-6 col-sm-6 col-xs-12"><label for="firstName">First Name </label><span
+                                    class="required">*</span></div>
+                            <div class="col-md-6 col-sm-6 col-xs-12"><input type="text" name="firstName" id="firstName"
+                                    placeholder="First Name" required /></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 col-sm-6 col-xs-12"><label for="lastName">Last Name </label><span
+                                    class="required">*</span></div>
+                            <div class="col-md-6 col-sm-6 col-xs-12"><input type="text" name="lastName" id="lastName"
+                                    placeholder="Last Name" required /></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 col-sm-6 col-xs-12"><label for="country">Country </label><span
+                                    class="required">*</span></div>
+                            <div class="col-md-6 col-sm-6 col-xs-12"><input type="text" name="country" id="country"
+                                    placeholder="Country" required /></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 col-sm-6 col-xs-12"><label for="street">Street Address </label><span
+                                    class="required">*</span></div>
+                            <div class="col-md-6 col-sm-6 col-xs-12"><input type="text" name="street" id="street"
+                                    placeholder="Street Address" required /></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 col-sm-6 col-xs-12"><label for="city">Town/City </label><span
+                                    class="required">*</span></div>
+                            <div class="col-md-6 col-sm-6 col-xs-12"><input type="text" name="city" id="city"
+                                    placeholder="Town/City" required /></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 col-sm-6 col-xs-12"><label for="state">State/County </label><span
+                                    class="required">*</span></div>
+                            <div class="col-md-6 col-sm-6 col-xs-12"><input type="text" name="state" id="state"
+                                    placeholder="State/County" required /></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 col-sm-6 col-xs-12"><label for="zip">Postal/CodeZip </label><span
+                                    class="required">*</span></div>
+                            <div class="col-md-6 col-sm-6 col-xs-12"><input type="text" name="zip" id="zip"
+                                    placeholder="PostalCode/Zip" required /></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 col-sm-6 col-xs-12"><label for="phone">Phone</label></div>
+                            <div class="col-md-6 col-sm-6 col-xs-12"><input type="text" name="phone" id="phone"
+                                    placeholder="Phone" /></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 col-sm-6 col-xs-12"><label for="email">Email</label></div>
+                            <div class="col-md-6 col-sm-6 col-xs-12"><input type="text" name="email" id="email"
+                                    placeholder="Email" /></div>
+                        </div>
+                    </div>
+
+                    <!--Mailing-->
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <h2 style="margin-right:20px; display:inline">Mailing address the same?</h2>
+                        <input type="checkbox" id="sameAddress" name="sameAddress" value="Yes"
+                            style="width: auto; margin-bottom: 20px;" />
+                        <div class="row">
+                            <div class="col-md-6 col-sm-6 col-xs-12"><label for="mfirstName">First Name</label><span
+                                    class="required">*</span></div>
+                            <div class="col-md-6 col-sm-6 col-xs-12"><input type="text" name="mfirstName"
+                                    id="mfirstName" placeholder="First Name" required /></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 col-sm-6 col-xs-12"><label for="mlastName">Last Name</label><span
+                                    class="required">*</span></div>
+                            <div class="col-md-6 col-sm-6 col-xs-12"><input type="text" name="mlastName" id="mlastName"
+                                    placeholder="Last Name" required /></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 col-sm-6 col-xs-12"><label for="mcountry">Country</label><span
+                                    class="required">*</span></div>
+                            <div class="col-md-6 col-sm-6 col-xs-12"><input type="text" name="mcountry" id="mcountry"
+                                    placeholder="Country" required /></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 col-sm-6 col-xs-12"><label for="mstreet">Street Address</label><span
+                                    class="required">*</span></div>
+                            <div class="col-md-6 col-sm-6 col-xs-12"><input type="text" name="mstreet" id="mstreet"
+                                    placeholder="Street Address" required /></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 col-sm-6 col-xs-12"><label for="mcity">Town/City</label><span
+                                    class="required">*</span></div>
+                            <div class="col-md-6 col-sm-6 col-xs-12"><input type="text" name="mcity" id="mcity"
+                                    placeholder="Town/City" / required></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 col-sm-6 col-xs-12"><label for="mstate">State/County</label><span
+                                    class="required">*</span></div>
+                            <div class="col-md-6 col-sm-6 col-xs-12"><input type="text" name="mstate" id="mstate"
+                                    placeholder="State/County" required /></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 col-sm-6 col-xs-12"><label for="mzip">Postal/CodeZip</label><span
+                                    class="required">*</span></div>
+                            <div class="col-md-6 col-sm-6 col-xs-12"><input type="text" name="mzip" id="mzip"
+                                    placeholder="PostalCode/Zip" required /></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 col-sm-6 col-xs-12"><label for="mphone">Phone</label></div>
+                            <div class="col-md-6 col-sm-6 col-xs-12"><input type="text" name="mphone" id="mphone"
+                                    placeholder="Phone" /></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 col-sm-6 col-xs-12"><label for="memail">Email</label></div>
+                            <div class="col-md-6 col-sm-6 col-xs-12"><input type="text" name="memail" id="memail"
+                                    placeholder="Email" /></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Payment-->
+                <div class="row section">
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <h2>Payment Information</h2>
+                        <div class="row">
+                            <div class="col-md-6 col-sm-6 col-xs-12"><label for="creditNum">Credit Card Number
+                                </label><span class="required">*</span></div>
+                            <div class="col-md-6 col-sm-6 col-xs-12"><input type="text" name="creditNum" id="creditNum"
+                                    placeholder="Credit Card Number" required />
+                                <br /><span style="color:red" id="creditNumError"></span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 col-sm-6 col-xs-12"><label for="cvc">CVC </label><span
+                                    class="required">*</span></div>
+                            <div class="col-md-6 col-sm-6 col-xs-12"><input type="text" name="cvc" id="cvc"
+                                    placeholder="CVC" required />
+                                <br /><span style="color:red" id="cvcError"></span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 col-sm-6 col-xs-12"><label for="expDate">Expiry Date </label><span
+                                    class="required">*</span></div>
+                            <div class="col-md-6 col-sm-6 col-xs-12"><input type="date" name="expDate" id="expDate"
+                                    placeholder="Expiry Date" required />
+                                <br /><span style="color:red" id="expDateError"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Terms and Conditions-->
+                <div class="row section">
+                    <input type="checkbox" id="termsCondAgree" name="termsCondAgree" style="width: auto"
+                        autocomplete="off" required />
+                    <label for="termsCondAgree"> I agree to the terms and conditions</label><span
+                        class="required">*</span><br>
+                    <p style="margin-top: 40px">
+                        <label for="signature">Please sign here</label><span class="required">*</span><br />
+                        <input type="text" id="signature" name="signature" class="signature" style="width: auto"
+                            autocomplete="off" required />
+                    </p>
+                </div>
+
+                <!--Submit Claim button-->
+                <div class="formNav section" style="text-align: left">
+                    <input class="button-normal" id="btnAgree" type="submit" value="Submit Claim" />
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+    <!-- Start Footer bottom Area -->
+    <footer>
+        <div class="footer-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 col-sm-4 col-xs-12">
+                        <div class="footer-content">
+                            <div class="footer-head">
+                                <div class="footer-logo">
+                                    <h2>Alemania Tools</h2>
+                                </div>
+
+                                <p>Alemania offers a wide range of power tools for professionals in the construction
+                                    trades.</p>
+                                <div class="footer-icons">
+                                    <ul>
+                                        <li>
+                                            <a href="#"><i class="fa fa-facebook"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i class="fa fa-twitter"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i class="fa fa-google"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i class="fa fa-pinterest"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end single footer -->
+                    <div class="col-md-4 col-sm-4 col-xs-12">
+                        <div class="footer-content">
+                            <div class="footer-head">
+                                <h4>information</h4>
+                                <div class="footer-contacts">
+                                    <p><span>Tel:</span> +123 456 789</p>
+                                    <p><span>Email:</span> group8-SE@rutgers.edu</p>
+                                    <p><span>Working Hours:</span> 9am-5pm</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end single footer -->
+                    <div class="col-md-4 col-sm-4 col-xs-12">
+                        <div class="footer-content">
+                            <div class="footer-head">
+                                <h4>Instagram</h4>
+                                <div class="flicker-img">
+                                    <a href="#"><img src="img/portfolio/1.jpg" alt=""></a>
+                                    <a href="#"><img src="img/portfolio/2.jpg" alt=""></a>
+                                    <a href="#"><img src="img/portfolio/3.jpg" alt=""></a>
+                                    <a href="#"><img src="img/portfolio/4.jpg" alt=""></a>
+                                    <a href="#"><img src="img/portfolio/5.jpg" alt=""></a>
+                                    <a href="#"><img src="img/portfolio/6.jpg" alt=""></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-area-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <div class="copyright text-center">
+                            <p>
+                                &copy; Copyright <strong>eBusiness</strong>. All Rights Reserved
+                            </p>
+                        </div>
+                        <div class="credits">
+                            <!--
+                    All the links in the footer should remain intact.
+                    You can delete the links only if you purchased the pro version.
+                    Licensing information: https://bootstrapmade.com/license/
+                    Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=eBusiness
+                    -->
+                            Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+    <!-- JavaScript Libraries -->
+    <script src="lib/jquery/jquery.min.js"></script>
+    <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/venobox/venobox.min.js"></script>
+    <script src="lib/knob/jquery.knob.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/parallax/parallax.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/nivo-slider/js/jquery.nivo.slider.js" type="text/javascript"></script>
+    <script src="lib/appear/jquery.appear.js"></script>
+    <script src="lib/isotope/isotope.pkgd.min.js"></script>
+
+    <script src="js/main.js"></script>
+</body>
+<script type="text/javascript">
+    function validateForm() {
+        $("#expDateError").text('');
+        $("#creditNumError").text('');
+        $("#cvcError").text('');
+
+        //validate date
+        var today = new Date();
+        var dd = String(today.getDate()).padStart(2, '0');
+        var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+        var yyyy = today.getFullYear();
+        today = new Date(yyyy + '-' + mm + '-' + dd);
+
+        var expDate = new Date($("#expDate").val());
+        if (expDate < today) {
+            $("#expDateError").html(" Card has expired");
+            return false;
+        }
+        else {
+            $("#expDateError").text('');
+        }
+
+        //validate credit card number
+        var aeCardno = /^(?:3[47][0-9]{13})$/;
+        var visaCardNo = /^(?:4[0-9]{12}(?:[0-9]{3})?)$/;
+        var masterCardNo = /^(?:5[1-5][0-9]{14})$/;
+        var discoverCardNo = /^(?:6(?:011|5[0-9][0-9])[0-9]{12})$/;
+        var numberType = /[0-9]/;
+
+        if (!$("#creditNum").val().match(numberType) ||
+            (!$("#creditNum").val().match(aeCardno) &&
+                !$("#creditNum").val().match(visaCardNo) &&
+                !$("#creditNum").val().match(masterCardNo) &&
+                !$("#creditNum").val().match(discoverCardNo))) {
+            $("#creditNumError").html(" Not valid credit card number");
+            return false;
+        }
+        else {
+            $("#creditNumError").text('');
+        }
+
+        //validate cvcError
+        if (!$("#cvc").val().match(numberType)) {
+            $("#cvcError").html(" CVC must be number only");
+            return false;
+        }
+        else {
+            $("#cvcError").text('');
+        }
+        return true;
+    }
+
+    $(document).on('change', "#sameAddress", function () {
+        if (this.checked) {
+            $('#mfirstName').val($('#firstName').val());
+            $('#mlastName').val($('#lastName').val());
+            $('#mcountry').val($('#country').val());
+            $('#mstreet').val($('#street').val());
+            $('#mcity').val($('#city').val());
+            $('#mstate').val($('#state').val());
+            $('#mzip').val($('#zip').val());
+            $('#mphone').val($('#phone').val());
+            $('#memail').val($('#email').val());
+        }
+        else {
+            $('#mfirstName').val('');
+            $('#mlastName').val('');
+            $('#mcountry').val('');
+            $('#mstreet').val('');
+            $('#mcity').val('');
+            $('#mstate').val('');
+            $('#mzip').val('');
+            $('#mphone').val('');
+            $('#memail').val('');
+        }
+    });
+</script>
+
+</html>
