@@ -130,7 +130,7 @@
             </div>
 
             <!--FORM-->
-            <form action="paymentHandler.php" method="post" name="frmSubmitClaim" onsubmit="return validateForm()">
+            <form>
                 <div class="row section">
                     <!--Billing-->
                     <div class="col-md-6 col-sm-6 col-xs-12">
@@ -256,7 +256,7 @@
                         <div class="row">
                             <div class="col-md-6 col-sm-6 col-xs-12"><label for="creditNum">Credit Card Number
                                 </label><span class="required">*</span></div>
-                            <div class="col-md-6 col-sm-6 col-xs-12"><input type="text" name="creditNum" id="creditNum"
+                            <div class="col-md-6 col-sm-6 col-xs-12"><input type="text" name="creditNum" id="creditNum" value=""
                                     placeholder="Credit Card Number" required />
                                 <br /><span style="color:red" id="creditNumError"></span>
                             </div>
@@ -264,7 +264,7 @@
                         <div class="row">
                             <div class="col-md-6 col-sm-6 col-xs-12"><label for="cvc">CVC </label><span
                                     class="required">*</span></div>
-                            <div class="col-md-6 col-sm-6 col-xs-12"><input type="text" name="cvc" id="cvc"
+                            <div class="col-md-6 col-sm-6 col-xs-12"><input type="text" name="cvc" id="cvc" value=""
                                     placeholder="CVC" required />
                                 <br /><span style="color:red" id="cvcError"></span>
                             </div>
@@ -272,7 +272,7 @@
                         <div class="row">
                             <div class="col-md-6 col-sm-6 col-xs-12"><label for="expDate">Expiry Date </label><span
                                     class="required">*</span></div>
-                            <div class="col-md-6 col-sm-6 col-xs-12"><input type="date" name="expDate" id="expDate"
+                            <div class="col-md-6 col-sm-6 col-xs-12"><input type="date" name="expDate" id="expDate" value=""
                                     placeholder="Expiry Date" required />
                                 <br /><span style="color:red" id="expDateError"></span>
                             </div>
@@ -294,7 +294,7 @@
 
                 <!--Submit Claim button-->
                 <div class="formNav section" style="text-align: left">
-                    <input class="button-normal" id="btnAgree" type="submit" value="Submit Claim" />
+                    <input class="button-normal" id="btnAgree" type="button" value="Submit Claim" onclick="validateForm()" />
                 </div>
             </form>
         </div>
